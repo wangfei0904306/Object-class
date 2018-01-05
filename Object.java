@@ -29,8 +29,8 @@ package com.iciyun.adi.microframe.data;
  * Class {@code Object} is the root of the class hierarchy.
  * Every class has {@code Object} as a superclass. All objects,
  * including arrays, implement the methods of this class.
- * todo   Object 是类分层的根，每个类都把Object作为自己的超类
- * todo   所有的对象，包括数组，都实现这个类中的方法
+ * ----   Object 是类分层的根，每个类都把Object作为自己的超类
+ * ----   所有的对象，包括数组，都实现这个类中的方法
  * @author  unascribed
  * @see     Class
  * @since   JDK1.0
@@ -65,13 +65,13 @@ public class Object {
 
     /**
      * Returns a hash code value for the object. This method is
-     *   todo   返回对象的哈希值
+     *   ----   返回对象的哈希值
      * supported for the benefit of hash tables such as those provided by
-     *   todo   HashMap提供的哈希表会给我们带来很大的好处，这个方法就是为了支持哈希表来获得这些好处
+     *   ----   HashMap提供的哈希表会给我们带来很大的好处，这个方法就是为了支持哈希表来获得这些好处
      * {@link java.util.HashMap}.
      * <p>
      * The general contract of {@code hashCode} is:
-     *   todo   hashCode的一般约定是：
+     *   ----   hashCode的一般约定是：
      * <ul>
      * <li>Whenever it is invoked on the same object more than once during
      *     an execution of a Java application, the {@code hashCode} method
@@ -79,21 +79,21 @@ public class Object {
      *     used in {@code equals} comparisons on the object is modified.
      *     This integer need not remain consistent from one execution of an
      *     application to another execution of the same application.
-     *     todo   一、针对某一个对象，在整个Java应用执行期间，假如equals方法里用到的比对信息都没有经过修改，
-     *     todo   那不论何时调用这个对象的hashCode方法，都要返回一致的同一个整数。
-     *     todo   但是如果同样的应用起两个，那么它们经hashCode获取的整数不需要保持一致。
+     *     ----   一、针对某一个对象，在整个Java应用执行期间，假如equals方法里用到的比对信息都没有经过修改，
+     *     ----   那不论何时调用这个对象的hashCode方法，都要返回一致的同一个整数。
+     *     ----   但是如果同样的应用起两个，那么它们经hashCode获取的整数不需要保持一致。
      * <li>If two objects are equal according to the {@code equals(Object)}
      *     method, then calling the {@code hashCode} method on each of
      *     the two objects must produce the same integer result.
-     *     todo   二、如果equals方法判定两个对象相等，则分别调用两个对象的hashCode方法，将返回一样的整数结果。
+     *     ----   二、如果equals方法判定两个对象相等，则分别调用两个对象的hashCode方法，将返回一样的整数结果。
      * <li>It is <em>not</em> required that if two objects are unequal
      *     according to the {@link Object#equals(Object)}
      *     method, then calling the {@code hashCode} method on each of the
      *     two objects must produce distinct integer results.  However, the
      *     programmer should be aware that producing distinct integer results
      *     for unequal objects may improve the performance of hash tables.
-     *     todo   三、如果两个对象不相等（equals判定），那么调用hashCode方法不是必须要返回不同的整数值。
-     *     todo   但是编程人员要知道，为不同的对象返回不同的哈希值会提高哈希表的性能。
+     *     ----   三、如果两个对象不相等（equals判定），那么调用hashCode方法不是必须要返回不同的整数值。
+     *     ----   但是编程人员要知道，为不同的对象返回不同的哈希值会提高哈希表的性能。
      * </ul>
      * <p>
      * As much as is reasonably practical, the hashCode method defined by
@@ -102,8 +102,8 @@ public class Object {
      * address of the object into an integer, but this implementation
      * technique is not required by the
      * Java&trade; programming language.)
-     * todo   为了尽可能地合理和实用，Object中定义的hashCode方法为不同的对象返回不同的哈希值。
-     * todo   （这是把对象的内存地址转换成哈希值的经典实现，但是这个实现技术并不是Java语言必需的。）
+     * ----   为了尽可能地合理和实用，Object中定义的hashCode方法为不同的对象返回不同的哈希值。
+     * ----   （这是把对象的内存地址转换成哈希值的经典实现，但是这个实现技术并不是Java语言必需的。）
      *
      * @return  a hash code value for this object.
      * @see     Object#equals(Object)
@@ -113,37 +113,37 @@ public class Object {
 
     /**
      * Indicates whether some other object is "equal to" this one.
-     * todo   判断其它对象是否与当前对象相等
+     * ----   判断其它对象是否与当前对象相等
      * <p>
      * The {@code equals} method implements an equivalence relation
      * on non-null object references:
-     *   todo   equals方法实现了非空对象引用的一种等价关系
+     *   ----   equals方法实现了非空对象引用的一种等价关系
      * <ul>
      * <li>It is <i>reflexive</i>: for any non-null reference value
      *     {@code x}, {@code x.equals(x)} should return
      *     {@code true}.
-     *     todo   自反性，任何非空对象引用都要等于它自身
+     *     ----   自反性，任何非空对象引用都要等于它自身
      * <li>It is <i>symmetric</i>: for any non-null reference values
      *     {@code x} and {@code y}, {@code x.equals(y)}
      *     should return {@code true} if and only if
      *     {@code y.equals(x)} returns {@code true}.
-     *     todo   对称性，如果A等于B，那么B等于A
+     *     ----   对称性，如果A等于B，那么B等于A
      * <li>It is <i>transitive</i>: for any non-null reference values
      *     {@code x}, {@code y}, and {@code z}, if
      *     {@code x.equals(y)} returns {@code true} and
      *     {@code y.equals(z)} returns {@code true}, then
      *     {@code x.equals(z)} should return {@code true}.
-     *     todo   传递性，如果A等于B，B等于C，那么A等于C
+     *     ----   传递性，如果A等于B，B等于C，那么A等于C
      * <li>It is <i>consistent</i>: for any non-null reference values
      *     {@code x} and {@code y}, multiple invocations of
      *     {@code x.equals(y)} consistently return {@code true}
      *     or consistently return {@code false}, provided no
      *     information used in {@code equals} comparisons on the
      *     objects is modified.
-     *     todo   一致性，如果equals中相关的比对信息没有修改，那多次调用都要返回一样的值。
+     *     ----   一致性，如果equals中相关的比对信息没有修改，那多次调用都要返回一样的值。
      * <li>For any non-null reference value {@code x},
      *     {@code x.equals(null)} should return {@code false}.
-     *     todo   非空性，任何非空引用都不等于空
+     *     ----   非空性，任何非空引用都不等于空
      * </ul>
      * <p>
      * The {@code equals} method for class {@code Object} implements
@@ -153,13 +153,13 @@ public class Object {
      * if {@code x} and {@code y} refer to the same object
      * ({@code x == y} has the value {@code true}).
      * <p>
-     * todo Object中的equals实现的是对象间最可能的等价关系，当且仅当两个非空对象引用，引用的是同一个对象时，它们才是相等的。
+     * ---- Object中的equals实现的是对象间最可能的等价关系，当且仅当两个非空对象引用，引用的是同一个对象时，它们才是相等的。
      * Note that it is generally necessary to override the {@code hashCode}
      * method whenever this method is overridden, so as to maintain the
      * general contract for the {@code hashCode} method, which states
      * that equal objects must have equal hash codes.
-     * todo   注意，hashCode的一般约定中表明，相等的对象一定要返回相同的哈希值，
-     * todo   所以如果重写了对象的equals方法，那一般也必须要重写它的hashCode方法
+     * ----   注意，hashCode的一般约定中表明，相等的对象一定要返回相同的哈希值，
+     * ----   所以如果重写了对象的equals方法，那一般也必须要重写它的hashCode方法
      *
      * @param   obj   the reference object with which to compare.
      * @return  {@code true} if this object is the same as the obj
