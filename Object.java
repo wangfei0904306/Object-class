@@ -173,26 +173,34 @@ public class Object {
 
     /**
      * Creates and returns a copy of this object.  The precise meaning
+     * ----   创建并返回对象的一份拷贝
      * of "copy" may depend on the class of the object. The general
+     * ----   严格意义上的“copy”可能依赖于对象的类
      * intent is that, for any object {@code x}, the expression:
+     * ----   普遍意义上，针对任意对象，有如下表达式：
      * <blockquote>
      * <pre>
      * x.clone() != x</pre></blockquote>
      * will be true, and that the expression:
+     * ----   x.clone() != x
      * <blockquote>
      * <pre>
      * x.clone().getClass() == x.getClass()</pre></blockquote>
      * will be {@code true}, but these are not absolute requirements.
+     * ----   x.clone().getClass() == x.getClass()
      * While it is typically the case that:
      * <blockquote>
      * <pre>
      * x.clone().equals(x)</pre></blockquote>
      * will be {@code true}, this is not an absolute requirement.
+     * ----   x.clone().equals(x)
      * <p>
      * By convention, the returned object should be obtained by calling
      * {@code super.clone}.  If a class and all of its superclasses (except
      * {@code Object}) obey this convention, it will be the case that
      * {@code x.clone().getClass() == x.getClass()}.
+     * ----   按照惯例，返回对象应该通过调用super.clone获取。
+     * ----   如果一个类和它所有的父类都遵循这个约定，那么它就是x.clone().getClass() == x.getClass()的实例
      * <p>
      * By convention, the object returned by this method should be independent
      * of this object (which is being cloned).  To achieve this independence,
